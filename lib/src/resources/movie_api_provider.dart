@@ -20,4 +20,7 @@ class MovieApiProvider {
       throw Exception('Failed to load post');
     }
   }
+  updateMovieList(){
+
+  }
 }

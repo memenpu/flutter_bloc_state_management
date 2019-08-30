@@ -1,4 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 import 'src/app.dart';
+// Create storage
+final storage = new FlutterSecureStorage();
+
+//// Read value
+//String value = await storage.read(key: key);
+//
+//// Read all values
+//Map<String, String> allValues = await storage.readAll();
+//
+//// Delete value
+//await storage.delete(key: key);
+//
+//// Delete all
+//await storage.deleteAll();
+//
+//// Write value
+//await storage.write(key: key, value: value);
 void main() => runApp(App());
+
+
+
