@@ -65,12 +65,12 @@ class MyCustomFormState extends State<MyCustomForm> {
                     RaisedButton(
                       onPressed: () {
                         if (_formKey.currentState.validate()) {
-                          Scaffold.of(context).showSnackBar(
-                              SnackBar(content: Text('Processing Data')));
-                        }
                         String email = _emailController.text;
                         String password = _passwordController.text;
                         loginBloc.loginEventSC.add(LoginEvent(email: email, password: password));
+                        Scaffold.of(context).showSnackBar(
+                              SnackBar(content: Text('Loging in')));
+                        }
                       },
                       child: Text('Log in'),
                     ),
