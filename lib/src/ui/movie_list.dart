@@ -2,13 +2,8 @@ import 'package:flutter/material.dart';
 import '../models/item_model.dart';
 import '../blocs/movies_bloc.dart';
 
-mixin TextView{
-  Widget myTextView(){
-    return Text("hoel");
-  }
-}
 
-class MovieList extends StatelessWidget with TextView{
+class MovieList extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     bloc.fetchAllMovies();

@@ -3,22 +3,17 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 import 'src/app.dart';
 // Create storage
-final storage = new FlutterSecureStorage();
+class CustomerInfo extends Object{
+  static final CustomerInfo customerInfo = CustomerInfo._internal(new FlutterSecureStorage());
+  final FlutterSecureStorage storage;
 
-//// Read value
-//String value = await storage.read(key: key);
-//
-//// Read all values
-//Map<String, String> allValues = await storage.readAll();
-//
-//// Delete value
-//await storage.delete(key: key);
-//
-//// Delete all
-//await storage.deleteAll();
-//
-//// Write value
-//await storage.write(key: key, value: value);
+  CustomerInfo._internal(this.storage);
+  factory CustomerInfo(){
+    return customerInfo;
+  }
+}
+
+
 void main() => runApp(App());
 
 

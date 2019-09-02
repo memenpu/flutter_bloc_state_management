@@ -1,14 +1,10 @@
+import 'package:flutter_bloc_state_management/src/models/jwt_request.dart';
 import 'package:http/http.dart' as http;
 
 import 'dart:io';
 import 'dart:convert';
 
 main() async{
-//  Client DongeyClient = Client();
-
-
-
-  print("hello");
 
     final String url = "http://ec2-52-34-35-1.us-west-2.compute.amazonaws.com:8080/api/token-auth";
 
@@ -19,20 +15,4 @@ main() async{
     print(response.statusCode);
     print(response.body);
     print(response.headers);
-}
-
-class JwtRequest{
-  final String email;
-  final String password;
-
-  JwtRequest({this.email, this.password});
-
-
-  Map<String, dynamic> toJson() => _$AwtRequestToJson(this);
-
-  Map<String, dynamic> _$AwtRequestToJson(JwtRequest instance) =>
-      <String, dynamic>{
-        'email': instance.email,
-        'password': instance.password,
-      };
 }
