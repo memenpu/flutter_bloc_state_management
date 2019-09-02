@@ -13,7 +13,7 @@ class UserRepository {
   Future<String> authenticate({
     @required String email,
     @required String password,
-  }) => dongeyApiProvider.fetchToken();
+  }) => dongeyApiProvider.fetchToken(email ,password);
 
   Future<void> deleteToken() async {
     await CustomerInfo().storage.delete(key: 'token');
